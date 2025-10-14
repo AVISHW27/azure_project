@@ -1,0 +1,9 @@
+{
+	"name": "datafactory-azureproject",
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a0cfb069-c39a-454b-ac02-f90d5411ddf8",
+		"tenantId": "a4a45514-2b30-4ff6-a0a6-3cc892e4bbf1"
+	}
+}
