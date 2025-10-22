@@ -1,5 +1,5 @@
 {
-	"name": "Json1",
+	"name": "JSON_Dynamic",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorageTarget",
