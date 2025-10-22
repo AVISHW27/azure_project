@@ -133,6 +133,8 @@
 			{
 				"name": "update_last_cdc",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -201,7 +203,14 @@
 				"name": "fetch_max_cdc",
 				"description": "to provide max cdc get from AzureSqltoLake and pass to update_last_cdc",
 				"type": "Script",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "AzureSqlToLake",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
