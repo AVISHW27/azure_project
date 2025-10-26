@@ -12,7 +12,20 @@
 						{
 							"name": "AzureSqlToLake",
 							"type": "Copy",
-							"dependsOn": [],
+							"dependsOn": [
+								{
+									"activity": "Last_cdc",
+									"dependencyConditions": [
+										"Completed"
+									]
+								},
+								{
+									"activity": "current_timestamp",
+									"dependencyConditions": [
+										"Completed"
+									]
+								}
+							],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
@@ -133,7 +146,14 @@
 						{
 							"name": "IfIncrementaData",
 							"type": "IfCondition",
-							"dependsOn": [],
+							"dependsOn": [
+								{
+									"activity": "AzureSqlToLake",
+									"dependencyConditions": [
+										"Completed"
+									]
+								}
+							],
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
