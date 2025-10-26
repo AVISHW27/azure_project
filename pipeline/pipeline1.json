@@ -310,7 +310,7 @@
 			},
 			"table": {
 				"type": "string",
-				"defaultValue": "DimUser"
+				"defaultValue": "DimArtist"
 			},
 			"cdc_col": {
 				"type": "string",
