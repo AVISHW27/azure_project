@@ -312,7 +312,6 @@
 					{
 						"activity": "IfIncrementaData",
 						"dependencyConditions": [
-							"Failed",
 							"Succeeded"
 						]
 					}
@@ -329,7 +328,7 @@
 					"method": "POST",
 					"url": "https://prod-20.germanywestcentral.logic.azure.com:443/workflows/b53f268d0943423dad71e9898f390f34/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=pZ5tRjwegRJHnh7qgcaBttr2bfxAgSBfI1kHhO1Mpvw",
 					"body": {
-						"value": "{\n    \"pipeline_name\":@{pipeline().Pipeline},\n    \"pipeline_runId\":@{pipeline().RunId}\n}",
+						"value": "{\n    \"pipeline_name\": \"@{pipeline().Pipeline}\",\n    \"pipeline_runId\": \"@{pipeline().RunId}\"\n}\n",
 						"type": "Expression"
 					}
 				}
