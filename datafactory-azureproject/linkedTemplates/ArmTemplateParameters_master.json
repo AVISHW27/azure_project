@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactory-azureproject"
+		},
+		"AzureDataLakeStorageTarget_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabaseSource_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorageTarget_properties_typeProperties_url": {
+			"value": "https://storageforazureproject.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabaseSource_properties_typeProperties_server": {
+			"value": "azureserverajay.database.windows.net"
+		},
+		"AzureSqlDatabaseSource_properties_typeProperties_database": {
+			"value": "databaseajay"
+		},
+		"AzureSqlDatabaseSource_properties_typeProperties_userName": {
+			"value": "adminajay"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
